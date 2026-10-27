@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>World Map Explorer</title>
+</head>
+<body>
+  <h1>World Map Explorer</h1>
+  <p>Click on a highlighted country to read more about it. Each link opens in a new tab.
+     If you click on the sea or any empty area, the "default" area sends you to a page about the world.</p>
+
+  <img src="images/worldmap.jpg" alt="Simple world map" usemap="#worldmap" width="900" height="450">
+
+  <map name="worldmap">
+    <!-- circle: x, y, radius -->
+    <area shape="circle" coords="625,215,32" href="https://en.wikipedia.org/wiki/India" target="_blank" alt="India - circular region">
+
+    <!-- rect: left, top, right, bottom -->
+    <area shape="rect" coords="725,310,845,385" href="https://en.wikipedia.org/wiki/Australia" target="_blank" alt="Australia - rectangular region">
+
+    <!-- poly: x1,y1,x2,y2 ... -->
+    <area shape="poly" coords="110,100,250,95,265,130,235,170,180,170,130,140" href="https://en.wikipedia.org/wiki/United_States" target="_blank" alt="USA - polygon region">
+    <area shape="poly" coords="255,230,310,250,305,300,265,330,240,280" href="https://en.wikipedia.org/wiki/Brazil" target="_blank" alt="Brazil - polygon region">
+
+    <!-- default: everything that is not covered by the shapes above (keep it last) -->
+    <area shape="default" href="https://en.wikipedia.org/wiki/World_map" target="_blank" alt="Rest of the world">
+  </map>
+</body>
+</html>

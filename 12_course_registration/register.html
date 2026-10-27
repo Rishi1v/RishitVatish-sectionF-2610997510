@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Course Registration</title>
+</head>
+<body>
+  <h1>Online Course Registration</h1>
+  <p>Fill in the form below to register for an online course. Fields marked with * are required.</p>
+
+  <form action="https://httpbin.org/post" method="post" target="_blank" enctype="multipart/form-data">
+
+    <!-- hidden field -->
+    <input type="hidden" name="form_name" value="Online Course Registration">
+
+    <h3>Personal Information</h3>
+
+    <label for="sname">Student Name *</label><br>
+    <input type="text" id="sname" name="student_name" placeholder="Enter your full name" required>
+    <br><br>
+
+    <label for="email">Email Address *</label><br>
+    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+    <br><br>
+
+    <label for="mobile">Mobile Number *</label><br>
+    <input type="tel" id="mobile" name="mobile" placeholder="10 digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
+    <br><br>
+
+    <label for="age">Age</label><br>
+    <input type="number" id="age" name="age" min="15" max="60" value="18">
+    <br><br>
+
+    <label for="pass">Password *</label><br>
+    <input type="password" id="pass" name="password" placeholder="Minimum 6 characters" minlength="6" required>
+    <br><br>
+
+    <label for="dob">Date of Birth</label><br>
+    <input type="date" id="dob" name="dob">
+    <br><br>
+
+    <p>Gender *</p>
+    <input type="radio" id="male" name="gender" value="Male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other</label>
+
+    <h3>Course Preferences</h3>
+
+    <p>Skills you already know:</p>
+    <input type="checkbox" id="html" name="skills" value="HTML">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="skills" value="CSS">
+    <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="skills" value="JavaScript">
+    <label for="js">JavaScript</label>
+    <input type="checkbox" id="py" name="skills" value="Python">
+    <label for="py">Python</label>
+    <br><br>
+
+    <label for="course">Select Course *</label><br>
+    <select id="course" name="course" required>
+      <option value="">-- Select a course --</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Python Programming">Python Programming</option>
+      <option value="Data Analytics">Data Analytics</option>
+      <option value="Digital Marketing">Digital Marketing</option>
+    </select>
+    <br><br>
+
+    <label for="ctime">Preferred Class Time</label><br>
+    <input type="time" id="ctime" name="class_time">
+
+    <h3>Additional Details</h3>
+
+    <label for="address">Address / Additional Information</label><br>
+    <textarea id="address" name="address" rows="5" cols="40" placeholder="Write your address or anything else you want to tell us"></textarea>
+    <br><br>
+
+    <label for="doc">Upload Document / Photograph</label><br>
+    <input type="file" id="doc" name="document">
+    <br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>

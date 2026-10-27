@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Restaurant Menu</title>
+</head>
+<body>
+  <h1>Interactive Restaurant Menu</h1>
+  <p>Click on any food item to see more details. It will open in a new tab.</p>
+
+  <img src="images/food.jpg" alt="Restaurant food table" usemap="#foodmap" width="1000" height="666">
+
+  <map name="foodmap">
+    <!-- circles -->
+    <area shape="circle" coords="365,497,148" href="pizza.html" target="_blank" alt="Pizza">
+    <area shape="circle" coords="812,178,130" href="burger.html" target="_blank" alt="Burger">
+
+    <!-- rectangles -->
+    <area shape="rect" coords="620,340,800,510" href="fries.html" target="_blank" alt="French Fries">
+    <area shape="rect" coords="712,100,790,290" href="menucard.html" target="_blank" alt="Menu Card">
+
+    <!-- polygons -->
+    <area shape="poly" coords="20,500,40,420,120,395,180,420,185,480,140,560,60,570,20,540" href="sandwich.html" target="_blank" alt="Sandwich">
+    <area shape="poly" coords="500,8,668,125,540,290,352,140" href="cake.html" target="_blank" alt="Cake Slice">
+
+    <!-- default: anything else on the image -->
+    <area shape="default" href="menu.html" target="_blank" alt="Full Menu">
+  </map>
+</body>
+</html>
